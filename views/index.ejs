@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %>'s Site</p>
+
+    <form name = "myForm" id = "myForm" method="post" enctype="multipart/form-data" action="/addPost">
+    	<fieldset>
+    		<h5>Name: </h5>
+    		<input type="text" name="uName" id="uName"><br>
+    		<h5>Nick: </h5>
+    		<input type="text" name="uNick" id="uNick"><br>
+    		<h5>Message: </h5>
+    		<input type="text" style="width: 200px; height: 200px;" name="uMessage" id="uMessage"><br>
+    		<h5>Image: </h5>
+    		<input type="file" name="uImg" id="uImg"><br>
+    		<button type = "submit" id="submitDetails" name="submitDetails">Signup</button>
+    	</fieldset>
+    </form>
+    <script>
+    	// var form = document.forms.namedItem("myForm");
+    	// form.addEventListener('submit', function(ev){
+
+    	// 	var myFile = document.getElementById('uImg').files[0];
+    	// 	var oData = new FormData(form);
+    	// 	var oReq = new XMLHttpRequest();
+    	// 	oReq.open("post", "/addPost", true);
+    	// 	oReq.onload = function(oEvent){
+    	// 		if (oReq.status == 200){
+    	// 			console.log("HTTP Request complete");
+    	// 		}
+    	// 		else{
+    	// 			console.log("status not 200");
+    	// 		}
+    	// 	}
+    	// 	oReq.send(oData);
+    	// 	ev.preventDefault();
+    	// }, false);
+    </script>
+  </body>
+</html>
